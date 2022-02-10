@@ -1,14 +1,18 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './Header.css'
-
+import styled from 'styled-components';
+import img from './background.jpg'
 const Header = () => {
   return (  
-    <header className='Header'>
+    <headerContainer className='Header'>
       <h1> Hotel Menu</h1>
-    </header>
+    </headerContainer>
     
   );
 };
+
+const headerContainer = styled.header`
+  background-image: url
+`;
+
 
 export default Header;

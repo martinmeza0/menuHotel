@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Plato from './modules/Plato';
 import Header from './modules/Header/Header';
