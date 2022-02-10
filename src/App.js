@@ -1,5 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'
+import GlobalStyle from './GlobalStyle';
 import Plato from './modules/Plato';
 import Header from './modules/Header/Header';
 
@@ -7,10 +6,12 @@ function App() {
   return (
 
     <>
-      <Header></Header>
-      <div className="container">
-        <Plato/>
-      </div>
+      <GlobalStyle>
+        <Header></Header>
+        <div className="container">
+          <Plato/>
+        </div>
+      </GlobalStyle>
     </>
   );
 }
