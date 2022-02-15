@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import GlobalStyle from './GlobalStyle'
-// import Plato from './modules/Plato';
+import Plato from './modules/Plato';
 import Header from './modules/Header/Header'
 import axios from 'axios'
 import {v4 as uuidv4} from 'uuid'
@@ -22,7 +22,8 @@ function App() {
       <GlobalStyle/>
       <Header></Header>
       <div className="recipes container">
-        {recipes !== [] && recipes.map(recipe => <h2 key={uuidv4()}> {recipe.title} </h2>)}
+        {recipes !== [] && recipes.map(recipe => 
+        <Plato key={uuidv4()} recipe={recipe} ></Plato>)}
       </div>
     </>
   );
