@@ -12,7 +12,7 @@ function App() {
     const apiUrl = `https://api.spoonacular.com/recipes/random?number=4&apiKey=${Api_key}`
     // const apiUrl = 'https://jsonplaceholder.typicode.com/todos/'
     const request = await axios.get(apiUrl)
-    setRecipes(request.data)
+    setRecipes(request.data.recipes)
     console.log(request)
 }
     getFood()
