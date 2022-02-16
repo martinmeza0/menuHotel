@@ -7,10 +7,6 @@ function App() {
     <>
       <GlobalStyle/>
       <Header></Header>
-      {/* <div className="recipes container">
-        {recipes !== [] && recipes.map(recipe => 
-        <Plato key={uuidv4()} recipe={recipe} ></Plato>)}
-      </div> */}
       <Menu></Menu>
     </>
   );
