@@ -26,7 +26,10 @@ const Menu = () => {
 const MenuContainer = styled.main`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-around;
+
+  /* padding: 20px; */
 `
 
 export default Menu
