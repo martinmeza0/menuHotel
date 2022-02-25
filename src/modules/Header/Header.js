@@ -22,7 +22,11 @@ const HeaderContainer = styled.header`
   & > h1 {
     padding: 20px;
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
+  }
+
+  & > p {
+    font-size: 1.5rem;
   }
   & > p,h1 {
     text-shadow: -2px 3px 2px rgba(0, 0, 0, 0.5);

@@ -11,7 +11,7 @@ const Plato = ({recipe}) => {
         </div>
         <div className='information'>
           <h2>{title}</h2>
-          <span>Servings for {servings} persons</span>
+          <span>{servings} servings per person</span>
           <p dangerouslySetInnerHTML={{__html: summary}}></p>
           <a href={url} target="_blank" rel="noopener noreferrer">link</a>
         </div>
@@ -21,12 +21,10 @@ const Plato = ({recipe}) => {
 };
 
 const Recipe = styled.div`
-  background-color: #000;
+  background-color: #f6bd60;
   display: flex;
   flex-direction: row;
-  /* justify-content: space; */
   margin-bottom: 15px;
-  text-align: center;
   & > .img__container {
     width: 30%;
   }

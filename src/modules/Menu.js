@@ -3,6 +3,7 @@ import {v4 as uuidv4} from 'uuid'
 import Plato from './Plato'
 import { getFood } from '../services/foodApi'
 import styled from 'styled-components'
+import MenuDetails from './MenuDetails';
 
 const Menu = () => {
   const [recipes, setRecipes] = useState([])
@@ -16,6 +17,7 @@ const Menu = () => {
   return (
     <>
       <MenuContainer>
+        <MenuDetails recipes={recipes}></MenuDetails>
         {recipes !== [] && recipes.map(recipe => 
         <Plato key={uuidv4()} recipe={recipe} ></Plato>)}
       </MenuContainer>
@@ -26,10 +28,7 @@ const Menu = () => {
 const MenuContainer = styled.main`
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   justify-content: space-around;
-
-  /* padding: 20px; */
 `
 
 export default Menu
