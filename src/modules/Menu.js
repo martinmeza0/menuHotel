@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from 'react'
 import {v4 as uuidv4} from 'uuid'
 import Plato from './Plato'
-import { getFood } from '../services/foodApi'
+import { getAllFood } from '../services/foodApi'
 import styled from 'styled-components'
 import MenuDetails from './MenuDetails';
 
 const Menu = () => {
   const [recipes, setRecipes] = useState([])
   useEffect(() => {
-    getFood()
+    getAllFood()
       .then((request) => {
         setRecipes(request.data.recipes)
     })
@@ -30,5 +30,5 @@ const MenuContainer = styled.main`
   flex-direction: column;
   justify-content: space-around;
 `
-
+export { MenuContainer };
 export default Menu

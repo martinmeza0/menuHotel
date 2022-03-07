@@ -1,15 +1,23 @@
 import React from 'react'
-import GlobalStyle from './GlobalStyle'
-import Header from './modules/Header/Header'
-import Menu from './modules/Menu'
-function App() {
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from './pages/Home';
+import Search from './pages/Search';
+
+const App = () => {
   return (
-    <>
-      <GlobalStyle/>
-      <Header></Header>
-      <Menu></Menu>
-    </>
-  );
+    <Router>
+      <Routes>
+          <Route path="/"  element={<Home></Home>} />
+          <Route path="/search"  element={<Search></Search>} />
+      </Routes>
+    </Router>
+  )
 }
+
+
 
 export default App

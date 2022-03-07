@@ -10,10 +10,10 @@ const Plato = ({recipe}) => {
           <Image src={image} alt={title}></Image>
         </div>
         <div className='information'>
-          <h2>{title}</h2>
-          <span>{servings} servings per person</span>
-          <p dangerouslySetInnerHTML={{__html: summary}}></p>
-          <a href={url} target="_blank" rel="noopener noreferrer">link</a>
+          {title ? <h2>{title}</h2> : <></>}
+          {servings ? <span>{servings} servings per person</span> : <></>}
+          {summary ? <p dangerouslySetInnerHTML={{__html: summary}}></p> : <></>}
+          {url ? <a href={url} target="_blank" rel="noopener noreferrer">link</a> : <></>}
         </div>
       </Recipe>
     </>
